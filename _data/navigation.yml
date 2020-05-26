@@ -2,8 +2,10 @@
 main:
   - title: "Quick-Start Guide"
     url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "Spring Legacy"
+    url: /categories/springLegacy/  
   - title: "Django"
-    url: /django/  
+    url: /categories/django/  
   - title: "Categories"
     url: /categories/    
   - title: "Tags"
