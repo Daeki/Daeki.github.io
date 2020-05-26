@@ -10,24 +10,27 @@ classes: wide
 #last_modified_at: 2019-04-13T08:06:00-05:00
 ---
 
-## 가상환경
-
 - Python Project 별로 각기 다른 library나 version을 다르게 주려할 때
 - System에 설치가 아니라 각각 설치이므로 버전 관리 용이
 
+
+
 ### 1. 가상환경 생성 관리
 
-#### A. venv
 
-- python 3.3 부터 내장된 명령어 
+
+### A. Venv
+
+- python 3.3 부터 내장된 명령어 	
 - 이전 버전의 python은 사용 불가
+
+
 
 ##### 1) 가상환경 생성
 
 - python -m venv 가상환경이름
 
-```{bash}
-
+```bash
 # 가상환경을 생성할 위치
 d:\choa\python\work
 
@@ -49,8 +52,7 @@ C:\>python -m venv example
 - 실행 명령어(script의 위치) 
 - 가상환경명\Scripts\activate.bat
 
-```{bash}
-
+```bash
 ## 1. 절대경로
 ## 경로명을 지정하여 실행
 C:\>d:\choa\python\work\example\Scripts\activate.bat    
@@ -83,10 +85,17 @@ D:\choa\python\work\example>activate.bat
 
 - 어떻게 실행 했던 deactivate 명령어를 입력 하면 종료
 
-```{bash}
-
+```bash
   (example) C:\>deactivate
 
 ```
+
+#### B. conda
+
+참고 : https://dojang.io/mod/page/view.php?id=2470
+
+- 나중에 정리
+
+#### C. virtualenv
 
 
