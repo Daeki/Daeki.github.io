@@ -26,7 +26,7 @@ classes: wide
 
 - python -m venv 가상환경이름
 
-```{.bash}
+```{bash}
 
 # 가상환경을 생성할 위치
 d:\choa\python\work
@@ -49,7 +49,7 @@ C:\>python -m venv example
 - 실행 명령어(script의 위치) 
 - 가상환경명\Scripts\activate.bat
 
-```{.bash}
+```{bash}
 
 ## 1. 절대경로
 ## 경로명을 지정하여 실행
@@ -83,7 +83,7 @@ D:\choa\python\work\example>activate.bat
 
 - 어떻게 실행 했던 deactivate 명령어를 입력 하면 종료
 
-```{.bash}
+```{bash}
 
   (example) C:\>deactivate
 
