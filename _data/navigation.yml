@@ -4,12 +4,14 @@ main:
     url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "Spring Legacy"
     url: /categories/springLegacy/  
+  - title: "Spring Boot"
+    url: /categories/springBoot/      
   - title: "Django"
     url: /categories/django/  
   - title: "Categories"
     url: /categories/    
-  - title: "Tags"
-    url: /tags/   
+  # - title: "Tags"
+  #   url: /tags/   
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
