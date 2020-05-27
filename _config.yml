@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "멍구리"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/ava.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "구리 구리 멍구리"
   location         : "Somewhere"
   email            :
