@@ -1,6 +1,6 @@
 ---
-title:  "SpringBoot 설치와 환경설정"
-excerpt: "SpringBoot 설치와 환경설정"
+title:  "1. SpringBoot 설치와 환경설정"
+excerpt: "1. SpringBoot 설치와 환경설정"
 
 categories:
   - springBoot

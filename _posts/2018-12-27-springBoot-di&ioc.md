@@ -1,6 +1,6 @@
 ---
-title:  "SpringBoot DI & IOC"
-excerpt: "SpringBoot DI & IOC"
+title:  "3. SpringBoot DI & IOC"
+excerpt: "3. SpringBoot DI & IOC"
 
 categories:
   - springBoot
