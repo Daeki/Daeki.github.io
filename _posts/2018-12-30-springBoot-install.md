@@ -13,7 +13,7 @@ classes: wide
 
 ##### 1. STS DOWN
 
-[Spring Boot Down][https://spring.io/tools]: 
+[Spring Boot Down](https://spring.io/tools): 
 
 ##### 2. 압축 풀기
 
