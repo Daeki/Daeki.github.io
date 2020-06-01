@@ -1,9 +1,9 @@
 ---
-title:  "SpringLegacy p1"
-excerpt: "SpringLegacy p1"
+title:  "SpringBoot p1"
+excerpt: "SpringBoot p1"
 
 categories:
-  - springLegacy
+  - springBoot
 tags:
   - spring
 classes: wide  
