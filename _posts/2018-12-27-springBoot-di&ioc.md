@@ -17,7 +17,7 @@ Bean을 생성하려 하는 Class 선언부에 역할에 맞는 Annotation 선�
 
 ```bash
 # @Controller		: 객체 생성, Controller 역할 부여 
-# @Service			: 객체 생성, Service 역할 부여 
+# @Service		: 객체 생성, Service 역할 부여 
 # @Repository		: 객체 생성, Repository(DAO) 역할 부여 
 # @Component		: 객체 생성, 그외 나머지 역할
 # @RestController	 : 객체 생성, 비동기 처리방식을 사용할 때 모든 메서드에 @ResponseBody 추가 해줌
@@ -91,7 +91,7 @@ public class PartArmRight extends Arm{    }
 public class PartArmLeft extends Arm{    }    
 
 
-// 객체 주입 1
+// 객체 주입 - 1
 @Component
 public class RobotPengHa {
 	// PartArmRight Type을 찾아 주입
@@ -103,7 +103,8 @@ public class RobotPengHa {
     private PartArmLeft partArmLeft;
 }
 
-// 객체 주입 2 부모형의 데이터타입 을 선언
+// 객체 주입 - 2 
+// 부모형의 데이터타입 을 선언
 @Component
 public class RobotPengHa {
     // partArmRight, partArmLeft 둘 모두 Arm 타입 이지만
@@ -115,7 +116,7 @@ public class RobotPengHa {
 }
 
 
-// 3. 객체 주입
+// 객체 주입 - 3
 // 부모형의 데이터타입 을 선언을 하고 이름이 다를 때는 Error 발생
 // 멤버변수가 Arm 타입(부모) 으로 선언되어 있고 같은 타입의 Bean이 두개 있다.
 // 이름으로 구분하려 하지만 해당 멤버변수명으로 선언된 이름이 없어 에러 발생
@@ -129,6 +130,7 @@ public class RobotPengHa {
 
 //--------------------------------------------------------------------
 
+// error 해결 
 @Component
 public class RobotPengHa {
 
