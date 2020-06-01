@@ -1,13 +1,13 @@
 # main links
 main:
-  - title: "Spring Legacy"
-    url: /categories/springLegacy/  
+ # - title: "Spring Legacy"
+ #   url: /categories/springLegacy/  
   - title: "Spring Boot"
     url: /categories/springBoot/      
   - title: "Django"
     url: /categories/django/  
-  - title: "Categories"
-    url: /categories/    
+  - title: "Docker"
+    url: /categories/docker/    
   # - title: "Tags"
   #   url: /tags/   
   # - title: "About"
