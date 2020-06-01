@@ -5,8 +5,7 @@ excerpt: "SpringBoot 설치와 환경설정"
 categories:
   - springBoot
 tags:
-  - springboot
-	
+  - spring
 classes: wide 
 ---
 
