@@ -6,6 +6,8 @@ categories:
   - springBoot
 tags:
   - spring
+  - spring boot
+  - spring boot 설치
 classes: wide 
 ---
 

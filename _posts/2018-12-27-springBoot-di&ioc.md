@@ -5,7 +5,10 @@ excerpt: "SpringBoot DI & IOC"
 categories:
   - springBoot
 tags:
-  - springboot	
+  - springboot
+  - Spring boot
+  - DI
+  - IOC	
 classes: wide 
 ---
 
