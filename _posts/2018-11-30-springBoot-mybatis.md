@@ -13,7 +13,7 @@ classes: wide
 
 ##### 1. Project 생성
 
-![Project 생성](/assert/images/2018-11-30-springBoot-myBatis.PNG)
+![Project 생성](/assets/images/2018-11-30-springBoot-myBatis.PNG)
 
 - oracle 이 아닌 mysql을 쓴다면 mysql driver를 선택
 
