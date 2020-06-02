@@ -108,7 +108,7 @@ Boot 에서는 Mapper(DAO)가 Interface이기 때문에 @Repository만 단독 �
 
 2) src/main/resource 하위 (추가 패키지 생성 상관  X)
 
-![Project 생성](/assets/images/2018-11-30-springBoot-myBatis2.PNG)
+![Project 생성](/assets/images/2018-11-30-springBoot-myBatis2.png)
 
 - application.properties 파일에 Mapper.xml 파일의 경로를 명시
 
