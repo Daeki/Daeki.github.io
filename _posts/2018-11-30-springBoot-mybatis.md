@@ -108,12 +108,14 @@ Boot 에서는 Mapper(DAO)가 Interface이기 때문에 @Repository만 단독 �
 
 2) src/main/resource 하위 (추가 패키지 생성 상관  X)
 
+![Project 생성](/assets/images/2018-11-30-springBoot-myBatis2.PNG)
+
 - application.properties 파일에 Mapper.xml 파일의 경로를 명시
 
 ```properties
 ## application.properties
 ## mapper.xml 파일의 경로 작성
-mybatis.mapper-locations=classpath:/database/**/*Mapper.xml
+mybatis.mapper-locations=classpath:/data/**/*Mapper.xml
 ```
 
 
@@ -157,5 +159,31 @@ mybatis.mapper-locations=classpath:/database/**/*Mapper.xml
 # application.properties
 # applocation.properties 파일에 config 파일의 위치를 지정
 mybatis.config-location=classpath:database/mybatisConfig.xml
+```
+
+
+
+##### 7. Tip - Insert 시 자동 생성 키 사용
+
+```xml
+---- Mysql
+# keyProperty="num" -> BoardVO의 멤버변수명
+# AutoIncement로 작성된 번호를 num에 대입 후 쿼리문 실행
+
+<insert id="boardWrite" parameterType="BoardVO" useGeneratedKeys="true"  keyProperty="num">
+  insert into notice values (#{num}, #{title},....)
+</insert>
+
+
+---- Oracle
+# keyProperty="num" -> BoardVO의 멤버변수명
+# Sequence로 작성된 번호를 num에 대입 후 쿼리문 실행
+
+<insert id="boardWrite" parameterType="BoardVO">
+ <selectKey keyProperty="num" resultType="int" order="BEFORE">
+    select board_seq.nextval FROM DUAL
+  </selectKey>
+    insert into notice values (#{num}, #{title},....)
+</insert>
 ```
 
