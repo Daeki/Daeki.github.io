@@ -187,3 +187,45 @@ mybatis.config-location=classpath:database/mybatisConfig.xml
 </insert>
 ```
 
+
+
+##### 7. Tip - like 검색
+
+```xml
+---- MySql
+<select id="boardWrite" parameterType="Pager" resultType="BoardVO">
+	...
+    where contents like like concat(‘%’, #{search},’%’)
+</select>
+
+---- Oracle
+<select id="boardWrite" parameterType="Pager" resultType="BoardVO">
+	...
+    where contents like '%'||#{search}||'%'
+</select>
+
+```
+
+##### 7. Tip - pageing 
+
+```xml
+-- oracle은 limit 명령어가 없어서 rownum울 사용
+-- mysql은 limit 명령어 사용
+
+-- Mysql
+-- limit 시작번호, 갯수
+-- where 절에 쓰는게 아니라 order by 뒤에 씀
+<select id="boardWrite" parameterType="Pager" resultType="BoardVO">
+	select * from notice where num > 0 order by num desc limit 10, 5
+</select>
+
+-- Oracle
+-- rownum 사용
+<select id="boardWrite" parameterType="Pager" resultType="BoardVO">
+    select * from
+    (select N.*, rownum R from
+    (select * from notice where num > 0 order by num desc) N)
+    where R between 1 and 10;
+</select>
+```
+
