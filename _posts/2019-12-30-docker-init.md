@@ -48,8 +48,7 @@ c\:> docker rmi mysql
 
 ```bash
 # docker run [option 들] [이미지명]
-c\:> docker run -d --name db -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root 
-mysql
+c\:> docker run -d --name db -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql
 
 # -d : 백그라운드로 실행
 # --name [container 이름] : 다른 컨테이너와 구분하는 이름(직접 작성)
@@ -88,6 +87,7 @@ c\:> docker rm [Container 이름 or Container ID]
 # docker exec -it [Container 이름 or Container ID] [실행할 shell]
 c\:> docker exec -it db bin/bash
 root@33c5a1309b7d:/#
+
 # mysql 접속
 root@33c5a1309b7d:/# mysql -u -root -p
 Enter password:#Container 생성시 만든 password 입력 
