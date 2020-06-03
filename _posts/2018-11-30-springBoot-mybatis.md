@@ -206,7 +206,7 @@ mybatis.config-location=classpath:database/mybatisConfig.xml
 
 ```
 
-##### 7. Tip - pageing 
+##### 7. Tip - pageing
 
 ```xml
 -- oracle은 limit 명령어가 없어서 rownum울 사용
