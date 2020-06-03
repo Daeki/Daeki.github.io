@@ -87,7 +87,7 @@ public class NoticeService {
     public int boardWrite(BoardVO boardVO, MultipartFile [] files)throws Exception{
         
         //-------------------  File Save ------------------------------
-		int result =noticeRepository.setInsert(boardVO);
+	int result =noticeRepository.setInsert(boardVO);
      	File file = pathGenerator.getUseClassPathResource(filePath);
 		
 		for(MultipartFile multipartFile: files) {
