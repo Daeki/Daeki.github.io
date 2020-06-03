@@ -225,7 +225,7 @@ mybatis.config-location=classpath:database/mybatisConfig.xml
     select * from
     (select N.*, rownum R from
     (select * from notice where num > 0 order by num desc) N)
-    where R between 1 and 10;
+    where R between 1 and 10
 </select>
 ```
 
