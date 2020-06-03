@@ -63,7 +63,7 @@ public ModelAndView boardWrite(BoardVO boardVO, MultipartFile [] files)throws Ex
 
 
 
-##### 4. Service
+##### 4_1. Service
 
 ```java
 @Service
@@ -114,7 +114,7 @@ public class NoticeService {
 
 
 
-##### 5. FilePathGenerator
+##### 4_2. FilePathGenerator
 
 ```java
 // 다음 세개의 메서드는 파일을 저장할 폴더의 실제 경로를 File객체에 담아서 리턴
@@ -186,7 +186,7 @@ public class FilePathGenerator {
   }
 ```
 
-##### 6. FileManager
+##### 4_3. FileManager
 
 ```java
 // 다음 두 메서드 중 어떤 것을 사용하더라고 결과는 같음
@@ -224,5 +224,44 @@ public class FileSaver {
     }
 
 }
+```
+
+##### 5. Repository(DAO)
+
+```java
+//NoticeRepository
+@Mapper
+public interface NoticeRepository extends BoardRepository {
+	public int setInsert(BoardVO boardVO) throws Exception;
+}
+
+
+//NoticeFileRepository
+@Mapper
+public interface NoticeFileRepostitory {
+	public int setInsert(NoticeFileVO noticeFileVO)throws Exception;
+}
+```
+
+
+
+##### 6. Mapper.xml
+
+```xml
+<!-- Notice Mapper -->
+<mapper namespace="com.iu.s1.board.notice.NoticeRepository">
+	<insert id="setInsert" parameterType="NoticeVO" useGeneratedKeys="true" keyProperty="num">
+		insert into notice values(#{num}, #{title}, #{writer}, #{contents}, now(), 0)		
+	</insert>
+</mapper>   
+
+
+<!--NoticeFile Mapper -->
+<mapper namespace="com.iu.s1.board.notice.noticeFile.NoticeFileRepostitory">
+	<insert id="setInsert" parameterType="NoticeFileVO">
+		insert into noticeFile (num, fileName, oriName)
+		values(#{num}, #{fileName}, #{oriName})
+	</insert>
+</mapper>  
 ```
 

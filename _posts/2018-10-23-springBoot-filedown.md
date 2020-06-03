@@ -90,6 +90,9 @@ public class FileDown extends AbstractView {
 ##### 3. Controller
 
 ```java
+	
+	// ex) 요청 URL : /notice/fileDown?fileNum=3
+
 	@GetMapping("fileDown")
 	public ModelAndView fileDown(NoticeFileVO noticeFileVO)throws Exception{
 		
@@ -105,5 +108,51 @@ public class FileDown extends AbstractView {
         mv.setViewName("fileDown");
 		return mv;
 	}
+```
+
+
+
+##### 4. Service
+
+```java
+@Service
+public class NoticeService implements BoardService{
+    	public NoticeFileVO fileDown(NoticeFileVO noticeFileVO)throws Exception{
+		return noticeFileRepostitory.fileDown(noticeFileVO);
+	}
+}
+```
+
+
+
+##### 5. Repository (DAO)
+
+```java
+@Mapper
+public interface NoticeFileRepostitory {
+	
+	public int setInsert(NoticeFileVO noticeFileVO)throws Exception;
+
+	public NoticeFileVO fileDown(NoticeFileVO noticeFileVO)throws Exception;
+}
+
+```
+
+
+
+##### 6. Mapper.xml
+
+```xml
+<mapper namespace="com.iu.s1.board.notice.noticeFile.NoticeFileRepostitory">
+	<insert id="setInsert" parameterType="NoticeFileVO">
+		insert into noticeFile (num, fileName, oriName)
+		values(#{num}, #{fileName}, #{oriName})
+	</insert>
+	
+	<select id="fileDown" parameterType="NoticeFileVO" resultType="NoticeFileVO">
+		select * from noticeFile where fileNum=#{fileNum}
+	</select>
+
+</mapper> 
 ```
 
