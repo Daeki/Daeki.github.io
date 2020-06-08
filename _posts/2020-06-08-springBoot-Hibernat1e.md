@@ -216,8 +216,11 @@ public class MemberVO {
 
 ​	속성
 ​		1) name : generator이름
+
 ​		2) sequenceName : sequence 이름
+
 ​		3) initialValue : sequence 시작 번호 지정 (DDL 생성시)
+
 ​		4) allocationSize : 시퀀스 한번 호출에 증가하는 수 5) catalog, schema : catalog, schema 이름
 
 
