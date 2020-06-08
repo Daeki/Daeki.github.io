@@ -29,7 +29,7 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 #--------------------- hibernate -------------------------------
 
 ##### table 생성
-spring.jpa.hibernate.ddl-auto=update
+spring.jpa.hibernate.ddl-auto=create
 
 ## create		: 기존 테이블 삭제 후 다시 생성
 ## create-drop	: create와 같으나 application이 종료 될때 테이블을 drop
